@@ -31,22 +31,24 @@ const FormValidator = () =>
     }
 
   return (
-    <form onSubmit={ handleSubmit }>
-        <h2>Sign Up</h2>
+    <div className='main-content'>
+      <form onSubmit={ handleSubmit }>
+          <h1 className='title'>Sign Up</h1>
 
-        <label htmlFor="email">E-mail</label>
-        <input type="text" name='email' onChange={ e => setEmail(e.target.value) } />
+          <label htmlFor="email">E-mail</label>
+          <input type="text" name='email' onChange={ e => setEmail(e.target.value) } />
 
-        <label htmlFor="password">Password</label>
-        <input type="password" name='password' onChange={ e => setPassword(e.target.value) } />
+          <label htmlFor="password">Password</label>
+          <input type="password" name='password' onChange={ e => setPassword(e.target.value) } />
 
-        <label htmlFor="confirm-password">Confirm Password</label>
-        <input type="password" name='confirm-password' onChange={ e => setConfirmPassword(e.target.value) } />
+          <label htmlFor="confirm-password">Confirm Password</label>
+          <input type="password" name='confirm-password' onChange={ e => setConfirmPassword(e.target.value) } />
 
-        { message }
-        
-        <input type="submit" value='Submit' />
-    </form>
+          <div className='message'> { message } </div>
+          
+          <input type="submit" value='Submit' />
+      </form>
+    </div>
   )
 }
 
